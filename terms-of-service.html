@@ -4,31 +4,242 @@
   <meta charset="UTF-8">
   <title>Terms of Service – Satisfying Hell</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
   <style>
-    body { max-width: 800px; margin: 40px auto; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; padding: 0 16px; }
-    h1, h2 { font-weight: 600; }
+    :root {
+      --bg-dark: #0a0a0f;
+      --bg-card: #12121a;
+      --accent-hot: #ff2d55;
+      --accent-orange: #ff6b35;
+      --text-main: #ffffff;
+      --text-muted: #8a8a9a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    .bg-glow {
+      position: fixed;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 30% 20%, rgba(255, 45, 85, 0.1) 0%, transparent 40%);
+      z-index: -1;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      backdrop-filter: blur(20px);
+      background: rgba(10, 10, 15, 0.8);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent-hot), var(--accent-orange));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+    }
+
+    .back-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: var(--accent-hot);
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 120px 24px 60px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 8px;
+      letter-spacing: -1px;
+      background: linear-gradient(135deg, var(--text-main), var(--text-muted));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .last-updated {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 48px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      color: var(--accent-hot);
+    }
+
+    p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    ul {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: var(--text-main);
+    }
+
+    a {
+      color: var(--accent-hot);
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
+
+    a:hover {
+      opacity: 0.8;
+    }
+
+    footer {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-hot);
+    }
+
+    .copyright {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      opacity: 0.6;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 16px 20px;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Terms of Service – Satisfying Hell</h1>
-  <p><strong>Last updated:</strong> [update the date]</p>
+  <div class="bg-glow"></div>
 
-  <h2>1. Description of the Service</h2>
-  <p>Satisfying Hell produces and publishes short-form visual animations featuring satisfying geometric patterns with intentional visual twists. The Service is offered for entertainment purposes only.</p>
+  <nav>
+    <a href="index.html" class="logo">SATISFYING HELL</a>
+    <a href="index.html" class="back-link">← Back to Home</a>
+  </nav>
 
-  <h2>2. Use of the Service</h2>
-  <p>By accessing our content or website, you agree not to copy, redistribute, or sell any part of the Service without permission, and not to use the Service for illegal or harmful activities.</p>
+  <main>
+    <h1>Terms of Service</h1>
+    <p class="last-updated">Last updated: December 10, 2024</p>
 
-  <h2>3. Intellectual Property</h2>
-  <p>All videos, animations, graphics, sounds, and branding published under Satisfying Hell are protected by copyright and other applicable laws.</p>
+    <h2>1. Description of the Service</h2>
+    <p>
+      Satisfying Hell produces and publishes short-form visual animations featuring satisfying geometric patterns with intentional visual twists. The Service is offered for entertainment purposes only.
+    </p>
 
-  <h2>4. Limitation of Liability</h2>
-  <p>Satisfying Hell is not liable for any direct or indirect damages arising from the use or inability to use the Service.</p>
+    <h2>2. Use of the Service</h2>
+    <p>By accessing our content or website, you agree to the following:</p>
+    <ul>
+      <li>Not to copy, redistribute, or sell any part of the Service without permission</li>
+      <li>Not to use the Service for illegal or harmful activities</li>
+      <li>To respect the intellectual property rights of Satisfying Hell</li>
+    </ul>
 
-  <h2>5. Changes to These Terms</h2>
-  <p>We may update these Terms from time to time. The latest version will always be available on this page.</p>
+    <h2>3. Intellectual Property</h2>
+    <p>
+      All videos, animations, graphics, sounds, and branding published under Satisfying Hell are protected by copyright and other applicable laws. Unauthorized use, reproduction, or distribution is strictly prohibited.
+    </p>
 
-  <h2>6. Contact</h2>
-  <p>For any questions about these Terms, you can contact us at: contact.lesansnom@gmail.com</p>
+    <h2>4. User-Generated Content</h2>
+    <p>
+      If you interact with our content on third-party platforms (comments, duets, stitches, etc.), you retain ownership of your content but grant us permission to feature or reference such content in our promotional materials.
+    </p>
+
+    <h2>5. Limitation of Liability</h2>
+    <p>
+      Satisfying Hell is not liable for any direct or indirect damages arising from the use or inability to use the Service. Our content is provided "as is" without warranties of any kind.
+    </p>
+
+    <h2>6. Third-Party Platforms</h2>
+    <p>
+      Our content is distributed through third-party platforms such as TikTok, Instagram, and YouTube. Your use of these platforms is subject to their respective terms of service and privacy policies.
+    </p>
+
+    <h2>7. Changes to These Terms</h2>
+    <p>
+      We may update these Terms from time to time. The latest version will always be available on this page. Continued use of our Service after changes constitutes acceptance of the updated Terms.
+    </p>
+
+    <h2>8. Contact</h2>
+    <p>
+      For any questions about these Terms, you can contact us at:
+      <a href="mailto:contact.lesansnom@gmail.com">contact.lesansnom@gmail.com</a>
+    </p>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="mailto:contact.lesansnom@gmail.com">Contact</a>
+    </div>
+    <p class="copyright">© 2024 Satisfying Hell — All rights reserved.</p>
+  </footer>
 </body>
 </html>
